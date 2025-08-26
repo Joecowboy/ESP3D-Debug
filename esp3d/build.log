@@ -1,0 +1,1001 @@
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netconfig.cpp: In static member function 'static const char* NetConfig::hostname(bool)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\configuration.h:251:24: error: invalid conversion from 'const char*' to 'int' [-fpermissive]
+  251 | #define ESP_MODEL_NAME "ESP Board"
+      |                        ^~~~~~~~~~~
+      |                        |
+      |                        const char*
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netconfig.cpp:578:43: note: in expansion of macro 'ESP_MODEL_NAME'
+  578 |     _hostname = ESP3DSettings::readString(ESP_MODEL_NAME);
+      |                                           ^~~~~~~~~~~~~~
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:27,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netconfig.cpp:43:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_settings.h:228:32: note:   initializing argument 1 of 'static String ESP3DSettings::readString(int, bool*)'
+  228 |   static String readString(int pos, bool *haserror = NULL);
+      |                            ~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\ftp\FtpServer.cpp: In member function 'void FtpServer::handle()':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\ftp\FtpServer.cpp:60:5: error: 'disableFtp' was not declared in this scope
+   60 |     disableFtp();
+      |     ^~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\ftp\FtpServer.cpp: At global scope:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\ftp\FtpServer.cpp:73:6: error: no declaration matches 'void FtpServer::enableFtp()'
+   73 | void FtpServer::enableFtp() {
+      |      ^~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\ftp\FtpServer.cpp:73:6: note: no functions named 'void FtpServer::enableFtp()'
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\ftp\FtpServer.cpp:12:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\ftp\FtpServer.h:75:7: note: 'class FtpServer' defined here
+   75 | class FtpServer {
+      |       ^~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\ftp\FtpServer.cpp:100:6: error: no declaration matches 'void FtpServer::disableFtp()'
+  100 | void FtpServer::disableFtp() {
+      |      ^~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\ftp\FtpServer.cpp:100:6: note: no functions named 'void FtpServer::disableFtp()'
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\ftp\FtpServer.cpp:12:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\ftp\FtpServer.h:75:7: note: 'class FtpServer' defined here
+   75 | class FtpServer {
+      |       ^~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\ftp\FtpServer.cpp: In member function 'bool FtpServer::processFtpCommand(const char*)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\ftp\FtpServer.cpp:127:5: error: 'enableFtp' was not declared in this scope
+  127 |     enableFtp();
+      |     ^~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\ftp\FtpServer.cpp:131:5: error: 'disableFtp' was not declared in this scope
+  131 |     disableFtp();
+      |     ^~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-command.cpp: In static member function 'static void HTTP_Server::handle_web_command(AsyncWebServerRequest*)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-command.cpp:84:64: error: no matching function for call to 'ESP3DCommands::dispatch(const char*, ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel&)'
+   84 |                               ESP3DClientType::http, auth_level);
+      |                                                                ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\http_server.h:23,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-command.cpp:22:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char*' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-root.cpp: In static member function 'static void HTTP_Server::handle_root(AsyncWebServerRequest*)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-root.cpp:46:16: error: 'class AsyncWebServerRequest' has no member named 'addResponseHeader'
+   46 |       request->addResponseHeader("Content-Encoding", "gzip");
+      |                ^~~~~~~~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-root.cpp:56:12: error: 'class AsyncWebServerRequest' has no member named 'addResponseHeader'
+   56 |   request->addResponseHeader("Content-Encoding", "gzip");
+      |            ^~~~~~~~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-root.cpp:57:37: error: invalid conversion from 'const char*' to 'const uint8_t*' {aka 'const unsigned char*'} [-fpermissive]
+   57 |   request->send_P(200, "text/html", (const char *)tool_html_gz, tool_html_gz_size);
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                     |
+      |                                     const char*
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_message.h:33,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_settings.h:29,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:27,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\http_server.h:23,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-root.cpp:22:
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:243:70: note:   initializing argument 3 of 'void AsyncWebServerRequest::send_P(int, const String&, const uint8_t*, size_t, AwsTemplateProcessor)'
+  243 |     void send_P(int code, const String& contentType, const uint8_t * content, size_t len, AwsTemplateProcessor callback=nullptr);
+      |                                                      ~~~~~~~~~~~~~~~~^~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp: In static member function 'static bool NetServices::begin()':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:86:47: error: 'ESP_HOSTNAME' was not declared in this scope; did you mean 'ESP_MODEL_NAME'?
+   86 |   String hostname = ESP3DSettings::readString(ESP_HOSTNAME);
+      |                                               ^~~~~~~~~~~~
+      |                                               ESP_MODEL_NAME
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:91:31: error: 'ESP_WIFI_APSTA' was not declared in this scope; did you mean 'WIFI_AP_STA'?
+   91 |   if (NetConfig::getMode() == ESP_WIFI_APSTA) {
+      |                               ^~~~~~~~~~~~~~
+      |                               WIFI_AP_STA
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:97:62: error: no matching function for call to 'ESP3DCommands::dispatch(const char [41], ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+   97 |                               ESP3DAuthenticationLevel::admin);
+      |                                                              ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char [41]' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:114:64: error: no matching function for call to 'ESP3DCommands::dispatch(const char [29], ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  114 |                                 ESP3DAuthenticationLevel::admin);
+      |                                                                ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char [29]' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:124:64: error: no matching function for call to 'ESP3DCommands::dispatch(const char*, ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  124 |                                 ESP3DAuthenticationLevel::admin);
+      |                                                                ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char*' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:232:31: error: 'ESP_AP_SETUP' was not declared in this scope; did you mean 'RESPONSE_SETUP'?
+  232 |   if (NetConfig::getMode() == ESP_AP_SETUP) {
+      |                               ^~~~~~~~~~~~
+      |                               RESPONSE_SETUP
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:239:64: error: no matching function for call to 'ESP3DCommands::dispatch(const char [23], ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  239 |                                 ESP3DAuthenticationLevel::admin);
+      |                                                                ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char [23]' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:246:62: error: no matching function for call to 'ESP3DCommands::dispatch(const char [28], ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  246 |                               ESP3DAuthenticationLevel::admin);
+      |                                                              ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char [28]' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:258:60: error: no matching function for call to 'ESP3DCommands::dispatch(const char [19], ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  258 |                             ESP3DAuthenticationLevel::admin);
+      |                                                            ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char [19]' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:267:64: error: no matching function for call to 'ESP3DCommands::dispatch(const char*, ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  267 |                                 ESP3DAuthenticationLevel::admin);
+      |                                                                ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char*' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:280:60: error: no matching function for call to 'ESP3DCommands::dispatch(const char [21], ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  280 |                             ESP3DAuthenticationLevel::admin);
+      |                                                            ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char [21]' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:289:64: error: no matching function for call to 'ESP3DCommands::dispatch(const char*, ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  289 |                                 ESP3DAuthenticationLevel::admin);
+      |                                                                ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char*' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:302:60: error: no matching function for call to 'ESP3DCommands::dispatch(const char [18], ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  302 |                             ESP3DAuthenticationLevel::admin);
+      |                                                            ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char [18]' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:313:64: error: no matching function for call to 'ESP3DCommands::dispatch(const char*, ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  313 |                                 ESP3DAuthenticationLevel::admin);
+      |                                                                ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char*' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:320:48: error: 'ESP_WEBSOCKET_PORT' was not declared in this scope; did you mean 'MAX_WEBSOCKET_PORT'?
+  320 |   uint32_t ws_port = ESP3DSettings::readUint32(ESP_WEBSOCKET_PORT);
+      |                                                ^~~~~~~~~~~~~~~~~~
+      |                                                MAX_WEBSOCKET_PORT
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:327:60: error: no matching function for call to 'ESP3DCommands::dispatch(const char [35], ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  327 |                             ESP3DAuthenticationLevel::admin);
+      |                                                            ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char [35]' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:337:64: error: no matching function for call to 'ESP3DCommands::dispatch(const char*, ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  337 |                                 ESP3DAuthenticationLevel::admin);
+      |                                                                ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char*' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:350:60: error: no matching function for call to 'ESP3DCommands::dispatch(const char [27], ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  350 |                             ESP3DAuthenticationLevel::admin);
+      |                                                            ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char [27]' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:359:64: error: no matching function for call to 'ESP3DCommands::dispatch(const char*, ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  359 |                                 ESP3DAuthenticationLevel::admin);
+      |                                                                ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char*' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:372:60: error: no matching function for call to 'ESP3DCommands::dispatch(const char [39], ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  372 |                             ESP3DAuthenticationLevel::admin);
+      |                                                            ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char [39]' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:382:64: error: no matching function for call to 'ESP3DCommands::dispatch(const char*, ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  382 |                                 ESP3DAuthenticationLevel::admin);
+      |                                                                ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char*' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:418:64: error: no matching function for call to 'ESP3DCommands::dispatch(const char*, ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  418 |                                 ESP3DAuthenticationLevel::admin);
+      |                                                                ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char*' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:471:58: error: no matching function for call to 'ESP3DCommands::dispatch(const char*, ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  471 |                           ESP3DAuthenticationLevel::admin);
+      |                                                          ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:23:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*)'
+  124 |   bool dispatch(ESP3DMessage* msg, const char* sbuf);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:124:8: note:   candidate expects 2 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, uint8_t*, size_t)'
+  125 |   bool dispatch(ESP3DMessage* msg, uint8_t* sbuf, size_t len);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:125:8: note:   candidate expects 3 arguments, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*)'
+  126 |   bool dispatch(ESP3DMessage* msg);
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:126:8: note:   candidate expects 1 argument, 6 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:8: note: candidate: 'bool ESP3DCommands::dispatch(uint8_t*, size_t, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:127:39: note:   no known conversion for argument 2 from 'ESP3DClientType' to 'size_t' {aka 'unsigned int'}
+  127 |   bool dispatch(uint8_t* sbuf, size_t size, ESP3DClientType target, ESP3DRequest requestId, ESP3DMessageType type,
+      |                                ~~~~~~~^~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:8: note: candidate: 'bool ESP3DCommands::dispatch(ESP3DMessage*, const char*, ESP3DClientType, ESP3DRequest, ESP3DMessageType, ESP3DAuthenticationLevel)'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |        ^~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:129:31: note:   no known conversion for argument 1 from 'const char*' to 'ESP3DMessage*'
+  129 |   bool dispatch(ESP3DMessage* msg, const char* sbuf, ESP3DClientType target, ESP3DRequest requestId,
+      |                 ~~~~~~~~~~~~~~^~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp: In static member function 'static void NetServices::end()':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:503:31: error: 'ESP_AP_SETUP' was not declared in this scope; did you mean 'RESPONSE_SETUP'?
+  503 |   if (NetConfig::getMode() == ESP_AP_SETUP) {
+      |                               ^~~~~~~~~~~~
+      |                               RESPONSE_SETUP
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp: In static member function 'static void NetServices::handle()':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\network\netservices.cpp:574:33: error: 'ESP_AP_SETUP' was not declared in this scope; did you mean 'RESPONSE_SETUP'?
+  574 |     if (NetConfig::getMode() == ESP_AP_SETUP) {
+      |                                 ^~~~~~~~~~~~
+      |                                 RESPONSE_SETUP
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:27,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\wifi\wificonfig.cpp:32:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_settings.h:169:31: error: expected unqualified-id before string constant
+  169 | #define DEFAULT_AP_MASK_VALUE "255.255.255.0"
+      |                               ^~~~~~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\wifi\wificonfig.cpp:41:15: note: in expansion of macro 'DEFAULT_AP_MASK_VALUE'
+   41 | const uint8_t DEFAULT_AP_MASK_VALUE[] = {255, 255, 255, 0};
+      |               ^~~~~~~~~~~~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\wifi\wificonfig.cpp: In static member function 'static bool WiFiConfig::StartSTA()':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\wifi\wificonfig.cpp:161:77: error: 'esp3d_sta_ip' is not a member of 'ESP3DSettingIndex'; did you mean 'esp3d_sta_ssid'?
+  161 |     IPAddress ip(ESP3DSettings::read_IP(static_cast<int>(ESP3DSettingIndex::esp3d_sta_ip)));
+      |                                                                             ^~~~~~~~~~~~
+      |                                                                             esp3d_sta_ssid
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\wifi\wificonfig.cpp:162:82: error: 'esp3d_sta_gateway' is not a member of 'ESP3DSettingIndex'; did you mean 'esp3d_sta_password'?
+  162 |     IPAddress gateway(ESP3DSettings::read_IP(static_cast<int>(ESP3DSettingIndex::esp3d_sta_gateway)));
+      |                                                                                  ^~~~~~~~~~~~~~~~~
+      |                                                                                  esp3d_sta_password
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\wifi\wificonfig.cpp:163:79: error: 'esp3d_sta_mask' is not a member of 'ESP3DSettingIndex'; did you mean 'esp3d_sta_ssid'?
+  163 |     IPAddress mask(ESP3DSettings::read_IP(static_cast<int>(ESP3DSettingIndex::esp3d_sta_mask)));
+      |                                                                               ^~~~~~~~~~~~~~
+      |                                                                               esp3d_sta_ssid
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\wifi\wificonfig.cpp:164:78: error: 'esp3d_sta_dns' is not a member of 'ESP3DSettingIndex'; did you mean 'esp3d_sta_ssid'?
+  164 |     IPAddress dns(ESP3DSettings::read_IP(static_cast<int>(ESP3DSettingIndex::esp3d_sta_dns)));
+      |                                                                              ^~~~~~~~~~~~~
+      |                                                                              esp3d_sta_ssid
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\wifi\wificonfig.cpp: In static member function 'static bool WiFiConfig::StartAP(bool)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\wifi\wificonfig.cpp:267:75: error: 'esp3d_ap_ip' is not a member of 'ESP3DSettingIndex'; did you mean 'esp3d_ap_ssid'?
+  267 |   IPAddress ip(ESP3DSettings::read_IP(static_cast<int>(ESP3DSettingIndex::esp3d_ap_ip)));
+      |                                                                           ^~~~~~~~~~~
+      |                                                                           esp3d_ap_ssid
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\wifi\wificonfig.cpp: In static member function 'static bool WiFiConfig::StartAPSTA()':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\wifi\wificonfig.cpp:386:77: error: 'esp3d_ap_ip' is not a member of 'ESP3DSettingIndex'; did you mean 'esp3d_ap_ssid'?
+  386 |   IPAddress apIP(ESP3DSettings::read_IP(static_cast<int>(ESP3DSettingIndex::esp3d_ap_ip)));
+      |                                                                             ^~~~~~~~~~~
+      |                                                                             esp3d_ap_ssid
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\wifi\wificonfig.cpp:448:77: error: 'esp3d_sta_ip' is not a member of 'ESP3DSettingIndex'; did you mean 'esp3d_sta_ssid'?
+  448 |     IPAddress ip(ESP3DSettings::read_IP(static_cast<int>(ESP3DSettingIndex::esp3d_sta_ip)));
+      |                                                                             ^~~~~~~~~~~~
+      |                                                                             esp3d_sta_ssid
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\wifi\wificonfig.cpp:449:82: error: 'esp3d_sta_gateway' is not a member of 'ESP3DSettingIndex'; did you mean 'esp3d_sta_password'?
+  449 |     IPAddress gateway(ESP3DSettings::read_IP(static_cast<int>(ESP3DSettingIndex::esp3d_sta_gateway)));
+      |                                                                                  ^~~~~~~~~~~~~~~~~
+      |                                                                                  esp3d_sta_password
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\wifi\wificonfig.cpp:450:79: error: 'esp3d_sta_mask' is not a member of 'ESP3DSettingIndex'; did you mean 'esp3d_sta_ssid'?
+  450 |     IPAddress mask(ESP3DSettings::read_IP(static_cast<int>(ESP3DSettingIndex::esp3d_sta_mask)));
+      |                                                                               ^~~~~~~~~~~~~~
+      |                                                                               esp3d_sta_ssid
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\wifi\wificonfig.cpp:451:78: error: 'esp3d_sta_dns' is not a member of 'ESP3DSettingIndex'; did you mean 'esp3d_sta_ssid'?
+  451 |     IPAddress dns(ESP3DSettings::read_IP(static_cast<int>(ESP3DSettingIndex::esp3d_sta_dns)));
+      |                                                                              ^~~~~~~~~~~~~
+      |                                                                              esp3d_sta_ssid
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\authentication\authentication_service.cpp: In static member function 'static ESP3DAuthenticationLevel AuthenticationService::getAuthenticatedLevel(const char*, ESP3DMessage*)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\authentication\authentication_service.cpp:74:38: error: 'decode' is not a member of 'base64'
+   74 |           String decoded = ::base64::decode(authHeader.substring(6));
+      |                                      ^~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\authentication\authentication_service.cpp: In static member function 'static bool AuthenticationService::is_authenticated(Authwebserver*, ESP3DAuthenticationLevel)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\authentication\authentication_service.cpp:122:45: error: 'class ESP3DMessageManager' has no member named 'getCurrentMessage'
+  122 |   ESP3DMessage *msg = esp3d_message_manager.getCurrentMessage();
+      |                                             ^~~~~~~~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\authentication\authentication_service.cpp: In static member function 'static char* AuthenticationService::create_session_ID()':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\authentication\authentication_service.cpp:204:45: error: 'class ESP3DMessageManager' has no member named 'getCurrentMessage'
+  204 |   ESP3DMessage *msg = esp3d_message_manager.getCurrentMessage();
+      |                                             ^~~~~~~~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\authentication\authentication_service.cpp: In static member function 'static bool AuthenticationService::ClearCurrentHttpSession()':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\authentication\authentication_service.cpp:236:45: error: 'class ESP3DMessageManager' has no member named 'getCurrentMessage'
+  236 |   ESP3DMessage *msg = esp3d_message_manager.getCurrentMessage();
+      |                                             ^~~~~~~~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\authentication\authentication_service.cpp: In static member function 'static bool AuthenticationService::CreateSession(ESP3DAuthenticationLevel, ESP3DClientType, const char*)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\authentication\authentication_service.cpp:261:45: error: 'class ESP3DMessageManager' has no member named 'getCurrentMessage'
+  261 |   ESP3DMessage *msg = esp3d_message_manager.getCurrentMessage();
+      |                                             ^~~~~~~~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-files.cpp: In static member function 'static void HTTP_Server::handleFSFileList(AsyncWebServerRequest*)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-files.cpp:162:21: error: 'class AsyncWebServerResponse' has no member named 'print'
+  162 |           response->print(buffer2send);
+      |                     ^~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-files.cpp:186:13: error: 'class AsyncWebServerResponse' has no member named 'print'
+  186 |   response->print(buffer2send);
+      |             ^~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-files.cpp:187:13: error: 'class AsyncWebServerResponse' has no member named 'print'
+  187 |   response->print(""); // End stream
+      |             ^~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\telnet\telnet_server.cpp: In member function 'bool Telnet_Server::begin(uint16_t, bool)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\telnet\telnet_server.cpp:110:31: error: 'ESP_TELNET_ON' was not declared in this scope
+  110 |   if (ESP3DSettings::readByte(ESP_TELNET_ON) != 1) {
+      |                               ^~~~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\telnet\telnet_server.cpp:116:39: error: 'ESP_TELNET_PORT' was not declared in this scope; did you mean 'MIN_TELNET_PORT'?
+  116 |     _port = ESP3DSettings::readUint32(ESP_TELNET_PORT);
+      |                                       ^~~~~~~~~~~~~~~
+      |                                       MIN_TELNET_PORT
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\serial\serial_service_esp8266.cpp: In member function 'bool ESP3DSerialService::begin(uint8_t)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\serial\serial_service_esp8266.cpp:69:34: error: 'ESP_BAUD_RATE' was not declared in this scope
+   69 |   br = ESP3DSettings::readUint32(ESP_BAUD_RATE);
+      |                                  ^~~~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\serial\serial_service_esp8266.cpp: In member function 'bool ESP3DSerialService::reset()':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\serial\serial_service_esp8266.cpp:267:7: error: 'ESP_BAUD_RATE' was not declared in this scope
+  267 |       ESP_BAUD_RATE, ESP3DSettings::getDefaultIntegerSetting(ESP_BAUD_RATE));
+      |       ^~~~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-filenotfound.cpp: In static member function 'static void HTTP_Server::handle_not_found(AsyncWebServerRequest*)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-filenotfound.cpp:39:20: error: no matching function for call to 'HTTP_Server::set_http_headers()'
+   39 |   set_http_headers(); // Call without request parameter as per http_server.h
+      |                    ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-filenotfound.cpp:22:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\http_server.h:49:15: note: candidate: 'static void HTTP_Server::set_http_headers(AsyncWebServerRequest*)'
+   49 |   static void set_http_headers(AsyncWebServerRequest *request);
+      |               ^~~~~~~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\http_server.h:49:15: note:   candidate expects 1 argument, 0 provided
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-filenotfound.cpp:45:31: error: 'urlDecode' is not a member of 'esp3d_string'; did you mean 'urlEncode'?
+   45 |   String path = esp3d_string::urlDecode(request->url()); // urlDecode is correct as per esp3d_string.h
+      |                               ^~~~~~~~~
+      |                               urlEncode
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-filenotfound.cpp:53:62: error: invalid conversion from 'const char*' to 'uint8_t' {aka 'unsigned char'} [-fpermissive]
+   53 |       request->send(ESP_FileSystem::open(pathWithGz.c_str(), "r"), contentType, true); // Use send with File and gzip encoding
+      |                                                              ^~~
+      |                                                              |
+      |                                                              const char*
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\filesystem\esp_globalFS.h:29,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\webdav\webdav_server.h:31,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:52,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\http_server.h:23,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-filenotfound.cpp:22:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\filesystem\esp_filesystem.h:82:50: note:   initializing argument 2 of 'static ESP_File ESP_FileSystem::open(const char*, uint8_t)'
+   82 |   static ESP_File open(const char *path, uint8_t mode = ESP_FILE_READ);
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-filenotfound.cpp:53:85: error: no matching function for call to 'AsyncWebServerRequest::send(ESP_File, String&, bool)'
+   53 |       request->send(ESP_FileSystem::open(pathWithGz.c_str(), "r"), contentType, true); // Use send with File and gzip encoding
+      |                                                                                     ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_message.h:33,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_settings.h:29,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:27,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\http_server.h:23,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-filenotfound.cpp:22:
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:236:10: note: candidate: 'void AsyncWebServerRequest::send(AsyncWebServerResponse*)'
+  236 |     void send(AsyncWebServerResponse *response);
+      |          ^~~~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:236:10: note:   candidate expects 1 argument, 3 provided
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:237:10: note: candidate: 'void AsyncWebServerRequest::send(int, const String&, const String&)'
+  237 |     void send(int code, const String& contentType=String(), const String& content=String());
+      |          ^~~~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:237:75: note:   no known conversion for argument 3 from 'bool' to 'const String&'
+  237 |     void send(int code, const String& contentType=String(), const String& content=String());
+      |                                                             ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:238:10: note: candidate: 'void AsyncWebServerRequest::send(AsyncWebServerRequest::FS&, const String&, const String&, bool, AwsTemplateProcessor)'
+  238 |     void send(FS &fs, const String& path, const String& contentType=String(), bool download=false, AwsTemplateProcessor callback=nullptr);
+      |          ^~~~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:238:19: note:   no known conversion for argument 1 from 'ESP_File' to 'AsyncWebServerRequest::FS&' {aka 'fs::FS&'}
+  238 |     void send(FS &fs, const String& path, const String& contentType=String(), bool download=false, AwsTemplateProcessor callback=nullptr);
+      |               ~~~~^~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:239:10: note: candidate: 'void AsyncWebServerRequest::send(AsyncWebServerRequest::File, const String&, const String&, bool, AwsTemplateProcessor)'
+  239 |     void send(File content, const String& path, const String& contentType=String(), bool download=false, AwsTemplateProcessor callback=nullptr);
+      |          ^~~~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:239:20: note:   no known conversion for argument 1 from 'ESP_File' to 'AsyncWebServerRequest::File' {aka 'fs::File'}
+  239 |     void send(File content, const String& path, const String& contentType=String(), bool download=false, AwsTemplateProcessor callback=nullptr);
+      |               ~~~~~^~~~~~~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:240:10: note: candidate: 'void AsyncWebServerRequest::send(Stream&, const String&, size_t, AwsTemplateProcessor)'
+  240 |     void send(Stream &stream, const String& contentType, size_t len, AwsTemplateProcessor callback=nullptr);
+      |          ^~~~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:240:23: note:   no known conversion for argument 1 from 'ESP_File' to 'Stream&'
+  240 |     void send(Stream &stream, const String& contentType, size_t len, AwsTemplateProcessor callback=nullptr);
+      |               ~~~~~~~~^~~~~~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:241:10: note: candidate: 'void AsyncWebServerRequest::send(const String&, size_t, AwsResponseFiller, AwsTemplateProcessor)'
+  241 |     void send(const String& contentType, size_t len, AwsResponseFiller callback, AwsTemplateProcessor templateCallback=nullptr);
+      |          ^~~~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:241:29: note:   no known conversion for argument 1 from 'ESP_File' to 'const String&'
+  241 |     void send(const String& contentType, size_t len, AwsResponseFiller callback, AwsTemplateProcessor templateCallback=nullptr);
+      |               ~~~~~~~~~~~~~~^~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-filenotfound.cpp:109:62: error: invalid conversion from 'const char*' to 'uint8_t' {aka 'unsigned char'} [-fpermissive]
+  109 |       request->send(ESP_FileSystem::open(pathWithGz.c_str(), "r"), contentType, true); // Use send with File and gzip encoding
+      |                                                              ^~~
+      |                                                              |
+      |                                                              const char*
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\filesystem\esp_globalFS.h:29,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\webdav\webdav_server.h:31,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:52,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\http_server.h:23,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-filenotfound.cpp:22:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\filesystem\esp_filesystem.h:82:50: note:   initializing argument 2 of 'static ESP_File ESP_FileSystem::open(const char*, uint8_t)'
+   82 |   static ESP_File open(const char *path, uint8_t mode = ESP_FILE_READ);
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-filenotfound.cpp:109:85: error: no matching function for call to 'AsyncWebServerRequest::send(ESP_File, String&, bool)'
+  109 |       request->send(ESP_FileSystem::open(pathWithGz.c_str(), "r"), contentType, true); // Use send with File and gzip encoding
+      |                                                                                     ^
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_message.h:33,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_settings.h:29,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:27,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\http_server.h:23,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-filenotfound.cpp:22:
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:236:10: note: candidate: 'void AsyncWebServerRequest::send(AsyncWebServerResponse*)'
+  236 |     void send(AsyncWebServerResponse *response);
+      |          ^~~~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:236:10: note:   candidate expects 1 argument, 3 provided
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:237:10: note: candidate: 'void AsyncWebServerRequest::send(int, const String&, const String&)'
+  237 |     void send(int code, const String& contentType=String(), const String& content=String());
+      |          ^~~~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:237:75: note:   no known conversion for argument 3 from 'bool' to 'const String&'
+  237 |     void send(int code, const String& contentType=String(), const String& content=String());
+      |                                                             ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:238:10: note: candidate: 'void AsyncWebServerRequest::send(AsyncWebServerRequest::FS&, const String&, const String&, bool, AwsTemplateProcessor)'
+  238 |     void send(FS &fs, const String& path, const String& contentType=String(), bool download=false, AwsTemplateProcessor callback=nullptr);
+      |          ^~~~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:238:19: note:   no known conversion for argument 1 from 'ESP_File' to 'AsyncWebServerRequest::FS&' {aka 'fs::FS&'}
+  238 |     void send(FS &fs, const String& path, const String& contentType=String(), bool download=false, AwsTemplateProcessor callback=nullptr);
+      |               ~~~~^~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:239:10: note: candidate: 'void AsyncWebServerRequest::send(AsyncWebServerRequest::File, const String&, const String&, bool, AwsTemplateProcessor)'
+  239 |     void send(File content, const String& path, const String& contentType=String(), bool download=false, AwsTemplateProcessor callback=nullptr);
+      |          ^~~~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:239:20: note:   no known conversion for argument 1 from 'ESP_File' to 'AsyncWebServerRequest::File' {aka 'fs::File'}
+  239 |     void send(File content, const String& path, const String& contentType=String(), bool download=false, AwsTemplateProcessor callback=nullptr);
+      |               ~~~~~^~~~~~~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:240:10: note: candidate: 'void AsyncWebServerRequest::send(Stream&, const String&, size_t, AwsTemplateProcessor)'
+  240 |     void send(Stream &stream, const String& contentType, size_t len, AwsTemplateProcessor callback=nullptr);
+      |          ^~~~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:240:23: note:   no known conversion for argument 1 from 'ESP_File' to 'Stream&'
+  240 |     void send(Stream &stream, const String& contentType, size_t len, AwsTemplateProcessor callback=nullptr);
+      |               ~~~~~~~~^~~~~~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:241:10: note: candidate: 'void AsyncWebServerRequest::send(const String&, size_t, AwsResponseFiller, AwsTemplateProcessor)'
+  241 |     void send(const String& contentType, size_t len, AwsResponseFiller callback, AwsTemplateProcessor templateCallback=nullptr);
+      |          ^~~~
+i:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer\src/ESPAsyncWebServer.h:241:29: note:   no known conversion for argument 1 from 'ESP_File' to 'const String&'
+  241 |     void send(const String& contentType, size_t len, AwsResponseFiller callback, AwsTemplateProcessor templateCallback=nullptr);
+      |               ~~~~~~~~~~~~~~^~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-description_xml.cpp: In static member function 'static void HTTP_Server::handle_SSDP(AsyncWebServerRequest*)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-description_xml.cpp:53:88: error: invalid conversion from 'int' to 'bool*' [-fpermissive]
+   53 |           ESP3DSettings::readByte(static_cast<int>(ESP3DSettingIndex::esp3d_hostname), 1),
+      |                                                                                        ^
+      |                                                                                        |
+      |                                                                                        int
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:27,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\http_server.h:23,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-description_xml.cpp:22:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_settings.h:222:42: note:   initializing argument 2 of 'static uint8_t ESP3DSettings::readByte(int, bool*)'
+  222 |   static uint8_t readByte(int pos, bool *haserror = NULL);
+      |                                          ^
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-description_xml.cpp:54:88: error: invalid conversion from 'int' to 'bool*' [-fpermissive]
+   54 |           ESP3DSettings::readByte(static_cast<int>(ESP3DSettingIndex::esp3d_hostname), 2));
+      |                                                                                        ^
+      |                                                                                        |
+      |                                                                                        int
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_commands.h:27,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\http_server.h:23,
+                 from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\handle-description_xml.cpp:22:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\core\esp3d_settings.h:222:42: note:   initializing argument 2 of 'static uint8_t ESP3DSettings::readByte(int, bool*)'
+  222 |   static uint8_t readByte(int pos, bool *haserror = NULL);
+      |                                          ^
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\upload-updatefw.cpp:44:6: error: no declaration matches 'void HTTP_Server::WebUpdateUpload(AsyncWebServerRequest*)'
+   44 | void HTTP_Server::WebUpdateUpload(AsyncWebServerRequest *request) {
+      |      ^~~~~~~~~~~
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\upload-updatefw.cpp:22:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\http_server.h:81:15: note: candidate is: 'static void HTTP_Server::WebUpdateUpload(AsyncWebServerRequest*, const String&, size_t, uint8_t*, size_t, bool)'
+   81 |   static void WebUpdateUpload(AsyncWebServerRequest *request, const String& filename, size_t index, uint8_t *data, size_t len, bool final);
+      |               ^~~~~~~~~~~~~~~
+In file included from I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\handlers\upload-updatefw.cpp:22:
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\http_server.h:42:7: note: 'class HTTP_Server' defined here
+   42 | class HTTP_Server {
+      |       ^~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\notifications\notifications_service.cpp: In member function 'bool NotificationsService::getPortFromSettings()':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\notifications\notifications_service.cpp:603:42: error: 'ESP_NOTIFICATION_SETTINGS' was not declared in this scope; did you mean 'ESP_NOTIFICATION_TITLE'?
+  603 |   String tmp = ESP3DSettings::readString(ESP_NOTIFICATION_SETTINGS);
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                          ESP_NOTIFICATION_TITLE
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\notifications\notifications_service.cpp: In member function 'bool NotificationsService::getServerAddressFromSettings()':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\notifications\notifications_service.cpp:618:42: error: 'ESP_NOTIFICATION_SETTINGS' was not declared in this scope; did you mean 'ESP_NOTIFICATION_TITLE'?
+  618 |   String tmp = ESP3DSettings::readString(ESP_NOTIFICATION_SETTINGS);
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                          ESP_NOTIFICATION_TITLE
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\notifications\notifications_service.cpp: In member function 'bool NotificationsService::getEmailFromSettings()':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\notifications\notifications_service.cpp:628:42: error: 'ESP_NOTIFICATION_SETTINGS' was not declared in this scope; did you mean 'ESP_NOTIFICATION_TITLE'?
+  628 |   String tmp = ESP3DSettings::readString(ESP_NOTIFICATION_SETTINGS);
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                          ESP_NOTIFICATION_TITLE
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\notifications\notifications_service.cpp: In member function 'bool NotificationsService::begin()':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\notifications\notifications_service.cpp:669:47: error: 'ESP_NOTIFICATION_TYPE' was not declared in this scope; did you mean 'ESP_NOTIFICATION_TITLE'?
+  669 |   _notificationType = ESP3DSettings::readByte(ESP_NOTIFICATION_TYPE);
+      |                                               ^~~~~~~~~~~~~~~~~~~~~
+      |                                               ESP_NOTIFICATION_TITLE
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\notifications\notifications_service.cpp:675:43: error: 'ESP_NOTIFICATION_TOKEN1' was not declared in this scope; did you mean 'ESP_NOTIFICATION_TITLE'?
+  675 |       _token1 = ESP3DSettings::readString(ESP_NOTIFICATION_TOKEN1);
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~
+      |                                           ESP_NOTIFICATION_TITLE
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\notifications\notifications_service.cpp:676:43: error: 'ESP_NOTIFICATION_TOKEN2' was not declared in this scope; did you mean 'ESP_NOTIFICATION_TITLE'?
+  676 |       _token2 = ESP3DSettings::readString(ESP_NOTIFICATION_TOKEN2);
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~
+      |                                           ESP_NOTIFICATION_TITLE
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\notifications\notifications_service.cpp:726:32: error: 'ESP_AUTO_NOTIFICATION' was not declared in this scope; did you mean 'ESP_NO_NOTIFICATION'?
+  726 |       (ESP3DSettings::readByte(ESP_AUTO_NOTIFICATION) == 0) ? false : true;
+      |                                ^~~~~~~~~~~~~~~~~~~~~
+      |                                ESP_NO_NOTIFICATION
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\plugin\esp3d_plugin_manager.cpp: In static member function 'static bool ESP3DPluginManager::handleCommand(const char*, const char*)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\plugin\esp3d_plugin_manager.cpp:32:98: error: 'no_request' is not a member of 'ESP3DRequest'
+   32 |       esp3d_commands.dispatch(nullptr, response.c_str(), ESP3DClientType::command, ESP3DRequest::no_request, ESP3DMessageType::unique, ESP3DAuthenticationLevel::guest);
+      |                                                                                                  ^~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\plugin\esp3d_plugin_manager.cpp:40:106: error: 'no_request' is not a member of 'ESP3DRequest'
+   40 |         esp3d_commands.dispatch(nullptr, "Plugin state updated", ESP3DClientType::command, ESP3DRequest::no_request, ESP3DMessageType::unique, ESP3DAuthenticationLevel::guest);
+      |                                                                                                          ^~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\plugin\esp3d_plugin_manager.cpp:42:115: error: 'no_request' is not a member of 'ESP3DRequest'
+   42 |         esp3d_commands.dispatch(nullptr, "Failed to update plugin state", ESP3DClientType::command, ESP3DRequest::no_request, ESP3DMessageType::unique, ESP3DAuthenticationLevel::guest);
+      |                                                                                                                   ^~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\http_server.cpp:272:2: error: #endif without #if
+  272 | #endif
+      |  ^~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\http_server.cpp: In static member function 'static void HTTP_Server::WebUpdateUpload(AsyncWebServerRequest*, const String&, size_t, uint8_t*, size_t, bool)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\http\http_server.cpp:130:98: error: 'UPDATE_SIZE_UNKNOWN' was not declared in this scope
+  130 |     size_t updateSize = request->hasParam("size") ? request->getParam("size")->value().toInt() : UPDATE_SIZE_UNKNOWN;
+      |                                                                                                  ^~~~~~~~~~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\websocket\websocket_server.cpp: In member function 'bool WebSocket_Server::begin(uint16_t)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\websocket\websocket_server.cpp:218:41: error: 'ESP_HTTP_PORT' was not declared in this scope; did you mean 'MIN_HTTP_PORT'?
+  218 |       _port = ESP3DSettings::readUint32(ESP_HTTP_PORT) + 1;
+      |                                         ^~~~~~~~~~~~~
+      |                                         MIN_HTTP_PORT
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\websocket\websocket_server.cpp:221:41: error: 'ESP_WEBSOCKET_PORT' was not declared in this scope; did you mean 'MAX_WEBSOCKET_PORT'?
+  221 |       _port = ESP3DSettings::readUint32(ESP_WEBSOCKET_PORT);
+      |                                         ^~~~~~~~~~~~~~~~~~
+      |                                         MAX_WEBSOCKET_PORT
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\websocket\websocket_server.cpp:223:35: error: 'ESP_WEBSOCKET_ON' was not declared in this scope
+  223 |       if (ESP3DSettings::readByte(ESP_WEBSOCKET_ON) == 0) {
+      |                                   ^~~~~~~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\time\time_service.cpp: In member function 'bool TimeService::isInternetTime(bool)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\time\time_service.cpp:72:47: error: 'ESP_INTERNET_TIME' was not declared in this scope; did you mean 'DEFAULT_INTERNET_TIME'?
+   72 |     _isInternetTime = ESP3DSettings::readByte(ESP_INTERNET_TIME) ? true : false;
+      |                                               ^~~~~~~~~~~~~~~~~
+      |                                               DEFAULT_INTERNET_TIME
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\time\time_service.cpp: In member function 'bool TimeService::begin()':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\time\time_service.cpp:112:42: error: 'ESP_TIME_SERVER1' was not declared in this scope
+  112 |   _server[0] = ESP3DSettings::readString(ESP_TIME_SERVER1);
+      |                                          ^~~~~~~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\time\time_service.cpp:113:42: error: 'ESP_TIME_SERVER2' was not declared in this scope
+  113 |   _server[1] = ESP3DSettings::readString(ESP_TIME_SERVER2);
+      |                                          ^~~~~~~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\time\time_service.cpp:114:42: error: 'ESP_TIME_SERVER3' was not declared in this scope
+  114 |   _server[2] = ESP3DSettings::readString(ESP_TIME_SERVER3);
+      |                                          ^~~~~~~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\time\time_service.cpp: In member function 'bool TimeService::setTimeZone(const char*)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\time\time_service.cpp:146:39: error: 'ESP_TIME_ZONE' was not declared in this scope
+  146 |     return ESP3DSettings::writeString(ESP_TIME_ZONE, _time_zone.c_str());
+      |                                       ^~~~~~~~~~~~~
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\time\time_service.cpp: In member function 'bool TimeService::updateTimeZone(bool)':
+I:\Administrator\Documents\Arduino\ESP3D-3.0.0-beta1\esp3d\src\modules\time\time_service.cpp:152:42: error: 'ESP_TIME_ZONE' was not declared in this scope
+  152 |   _time_zone = ESP3DSettings::readString(ESP_TIME_ZONE);
+      |                                          ^~~~~~~~~~~~~
+Using library ESP8266WiFi at version 1.0 in folder: C:\Users\Administrator\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\3.1.2\libraries\ESP8266WiFi 
+Using library ESPAsyncWebServer at version 3.1.0 in folder: I:\Administrator\Documents\Arduino\libraries\ESPAsyncWebServer 
+Using library ESPAsyncTCP at version 1.2.4 in folder: I:\Administrator\Documents\Arduino\libraries\ESPAsyncTCP 
+Using library Hash at version 1.0 in folder: C:\Users\Administrator\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\3.1.2\libraries\Hash 
+Using library EEPROM at version 1.0 in folder: C:\Users\Administrator\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\3.1.2\libraries\EEPROM 
+Using library LittleFS at version 0.1.0 in folder: C:\Users\Administrator\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\3.1.2\libraries\LittleFS 
+Using library ESP8266mDNS at version 1.2 in folder: C:\Users\Administrator\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\3.1.2\libraries\ESP8266mDNS 
+Using library ESP8266SSDP at version 1.0 in folder: C:\Users\Administrator\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\3.1.2\libraries\ESP8266SSDP 
+Using library DNSServer at version 1.1.1 in folder: C:\Users\Administrator\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\3.1.2\libraries\DNSServer 
+Using library ESP8266HTTPClient at version 1.2 in folder: C:\Users\Administrator\AppData\Local\Arduino15\packages\esp8266\hardware\esp8266\3.1.2\libraries\ESP8266HTTPClient 
+Using library WebSockets at version 2.7.0 in folder: I:\Administrator\Documents\Arduino\libraries\WebSockets 
+exit status 1
+
+Compilation error: no matching function for call to 'ESP3DCommands::dispatch(const char*, ESP3DClientType, ESP3DRequest&, ESP3DMessageType, ESP3DClientType, ESP3DAuthenticationLevel)'
