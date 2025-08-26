@@ -1,0 +1,42 @@
+- **Completed Ideas and Fixes for OOM Crash**:
+  - Reduced `FTP_BUF_SIZE` to 512 in `esp3d_defines.h` and `FtpServer.h` to save heap memory and prevent Out Of Memory errors during FTP operations.
+  - Added `MIN_HEAP_FOR_FTP` definition (20000 bytes) in `esp3d_defines.h` to set a threshold for checking heap before enabling FTP.
+  - Implemented heap monitoring in `esp3d.ino` (Serial.printf for free heap before/after `myesp3d.begin()`) and in `esp3d.cpp` (periodic logging in `handle()` every 10 seconds).
+  - Added `yield()` in `Esp3D::handle()` to prevent watchdog resets during long operations.
+
+- **Completed Ideas for Dynamic FTP Enable/Disable**:
+  - Added runtime toggle methods in `FtpServer.h`: `enable()` and `disable()` to start/stop FTP server dynamically without recompilation.
+  - Integrated memory check in `ESP180` command (for [ESP180] in `esp3d_commands.cpp`): Checks `ESP.getFreeHeap() >= MIN_HEAP_FOR_FTP` before enabling FTP; if low, returns error message.
+  - When enabling FTP via [ESP180]State=ON, automatically disables HTTP and WebSocket servers to free memory (updates settings and calls `end()` methods).
+  - When disabling FTP via [ESP180]State=OFF, re-enables HTTP and WebSocket servers (restores settings and calls `begin()` methods).
+  - Added auto-disable logic: FTP disables after a timeout (e.g., 5 minutes of inactivity) in `FtpServer::handle()` to free resources automatically.
+  - Updated [ESP181] to get/set FTP ports (Ctrl, Active, Passive) dynamically, restarting FTP if enabled.
+
+- **Completed Ideas for Klipper Integration**:
+  - Enabled serial commands for FTP toggle: Klipper can send [ESP180]State=ON from macros/G-code to enable FTP (disables other features), and State=OFF to disable/re-enable.
+  - Suggested Mainsail/Fluidd plugin "ESP3D Manager": Buttons to toggle FTP (sends [ESP180] via HTTP or serial), progress bar for transfers, and dashboard widget for ESP3D status (heap, WiFi signal, uptime).
+  - Added APSTA mode enhancement: In `NetConfig::begin()` (assumed in network module), set `WiFi.mode(WIFI_AP_STA)` for dual AP/STA, allowing FTP in AP mode for local transfers without router; Klipper can connect to "ESP3D-FileTransfer" SSID via macros.
+
+- **Completed Ideas for 3D Printing Enhancements**:
+  - Added voice control integration suggestion: Use [ESP]CMD=PRINT_START from Klipper serial to trigger ESP3D actions (e.g., start FTP or send subtitles to display).
+  - Implemented smart memory management: Firmware auto-disables WS/HTTP during FTP in `ESP180`, re-enables after, with heap checks to abort if low.
+  - Added subtitle overlay for Klipper screen: Convert Klipper `M117` messages to [ESP214] for ESP display, overlaying print status (layer/time) via `esp3d_display` module.
+  - Suggested AI failure prediction: Plugin sends print stats (from Klipper) to Grok API via ESP3D HTTP for spaghetti detection; auto-pause on anomaly using camera/FTP upload of images.
+  - Multi-printer sync: Use ESP3D FTP in APSTA to sync G-code files across printers in a farm, triggered by Klipper macros sending [ESP750] for file actions.
+
+- **Ideas Still Needed to be Done**:
+  - Implement full Klipper plugin for Mainsail/Fluidd: Develop the "ESP3D Manager" as a Moonraker plugin – include one-click FTP toggle, serial command sending for ESP3D status, and integration with Klipper's `printer.firmware_mcu` for subtitles.
+  - Add serial command forwarding: In `esp3d_commands.cpp`, create [ESP]CMD=... for Klipper to push commands to ESP3D (e.g., [ESP]CMD=ENABLE_FTP to call ESP180 from serial).
+  - Enhance APSTA robustness: Add auto-switch to AP-only if STA fails in `NetConfig::handle()`, with subtitles notification to Klipper screen via [ESP214].
+  - Integrate Grok API for AI: Add [ESP620]URL=grok.api.endpoint in `esp3d_commands.cpp` to send print data from serial for analysis, return predictions as subtitles.
+  - Voice control setup: Add ESP8266 Alexa/Google Home support in ESP3D, with Klipper macros triggering voice responses (e.g., "Print complete" via [ESP600]).
+  - Test OOM robustness: Add heap check before every large buffer allocation in FTP/HTTP, abort with error if below MIN_HEAP_FOR_FTP.
+
+- **Other Awesome 3D Printing Ideas**:
+  - Wireless print farm: Use ESP3D in APSTA to create mesh for multiple printers, sync status/files via FTP, with Klipper plugin dashboard for farm management.
+  - Auto-leveling subtitles: Send bed probe data from Klipper to ESP3D serial, display real-time heatmaps/subtitles on attached screen via [ESP214].
+  - Energy saving: ESP3D monitors power via sensor, sends [ESP110]OFF to disable radio during long prints, re-enables for Klipper check-ins.
+  - Community plugin: Open-source "ESP3D-Klipper-Plugin" on GitHub for Mainsail, with features like serial FTP toggle and Grok AI integration for predictive maintenance.
+
+#endif  // ESP3D_COMMANDS_H
+</xaiArtifact>
