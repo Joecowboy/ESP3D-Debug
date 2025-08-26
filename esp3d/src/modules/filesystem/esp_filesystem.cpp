@@ -126,25 +126,16 @@ bool ESP_FileSystem::format() {
   return FILESYSTEM.format();
 }
 
-ESP_File ESP_FileSystem::open(const char* path, uint8_t mode) {
-  File file;
-  if (!_started) return ESP_File();
+File ESP_FileSystem::open(const char* path, uint8_t mode) {
+  if (!_started) return File();
   if (mode == ESP_FILE_READ) {
-    file = FILESYSTEM.open(path, "r");
+    return FILESYSTEM.open(path, "r");
   } else if (mode == ESP_FILE_WRITE) {
-    file = FILESYSTEM.open(path, "w");
+    return FILESYSTEM.open(path, "w");
   } else if (mode == ESP_FILE_APPEND) {
-    file = FILESYSTEM.open(path, "a");
+    return FILESYSTEM.open(path, "a");
   }
-  if (!file) return ESP_File();
-  for (int i = 0; i < ESP_MAX_OPENHANDLE; i++) {
-    if (!tFile_handle[i]) {
-      tFile_handle[i] = file;
-      return ESP_File(&tFile_handle[i], file.isDirectory(), mode != ESP_FILE_READ, path);
-    }
-  }
-  file.close();
-  return ESP_File();
+  return File();
 }
 
 bool ESP_FileSystem::exists(const char* path) {
